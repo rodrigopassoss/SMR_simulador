@@ -71,6 +71,7 @@ while  (~colidiu && (i*tamos<tempo_max))
 
          if robo_(k).colidiu
             robo_(k) = robo_(k).simulacao_falha();
+            colidiu = 1;
          end
          
          experimento.flag = experimento.flag&robo_(k).chegou;

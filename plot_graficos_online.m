@@ -4,7 +4,6 @@ vlimitex = cos(aux)';
 vlimitey = sin(aux)';
 figure(1)
 hold off  
-subplot(211)
 plot(0,0,'.')
 hold on
 plot(Ax,Ay,'sk','MarkerEdgeColor','k','MarkerSize',2);
@@ -27,8 +26,7 @@ ylabel('y[cm]');
 drawnow
 
 % figure(2)
-subplot(212)
-imshow(uint8(experimento.mapa_descoberto(end:-1:1,:)))
+% imshow(uint8(experimento.mapa_descoberto(end:-1:1,:)))
 hold on
 % [M,N]=size(experimento.mapa_descoberto);
 % plot(experimento.fronteirax,M-experimento.fronteiray,'.r','MarkerSize',5);

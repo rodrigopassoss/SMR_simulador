@@ -36,7 +36,7 @@ end
 experimento.mapa_descoberto = [];
 
 %% Parâmetros da simulação
-tempo_max = 500; % tempo máximo do experimento em segundos 
+tempo_max = 1000; % tempo máximo do experimento em segundos 
 % tempo_total = tic; % controle de custo computacional (debug apenas)
 %% Habilita Plot
 habilitaPlot = 0;
