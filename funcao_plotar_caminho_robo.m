@@ -2,6 +2,9 @@ function funcao_plotar_caminho_robo_(arquivo,nRobos)
 
 load(arquivo);
 
+figure(2);
+imshow(uint8(experimento.mapa_descoberto(end:-1:1,:)))
+
 g = figure(3);
 set(g,'name','Resultado final - trajetória executada pelos robôs');
 axis equal
