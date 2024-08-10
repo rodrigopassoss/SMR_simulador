@@ -2,7 +2,7 @@ if(experimento.flag)
     
    [fronteiray,fronteirax] = find((experimento.mapa_descoberto(2:end,2:end)...
                                                          -experimento.mapa_descoberto(1:end-1,1:end-1))~=0);
-   if numel(fronteiray)==0
+   if numel(fronteiray)<10
        concluiu = 1;
    end
    [obsy,obsx] = find(experimento.mapa_descoberto==0);
@@ -10,13 +10,13 @@ if(experimento.flag)
    while k<(nRobos+1)
         idx = randi([1 length(fronteiray)],1,1);
         dist_obs = sqrt((fronteirax(idx)-obsx).^2 + (fronteiray(idx)-obsy).^2);
-        if min(dist_obs)>3*robo_(k).raio
+        if min(dist_obs)>robo_(k).raio
             if k == 1
                 pontos(:,k) = [fronteirax(idx);fronteiray(idx)];
                 k = k+1;
             else
                 dist_p = sqrt((fronteirax(idx)-pontos(1,1:(k-1))).^2 + (fronteiray(idx)-pontos(2,1:(k-1))).^2);
-                if min(dist_p)>3*robo_(k).raio
+                if min(dist_p)>robo_(k).raio
                     pontos(:,k) = [fronteirax(idx);fronteiray(idx)];
                     k = k+1;                    
                 end
