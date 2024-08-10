@@ -2,6 +2,9 @@ if(experimento.flag)
     
    [fronteiray,fronteirax] = find((experimento.mapa_descoberto(2:end,2:end)...
                                                          -experimento.mapa_descoberto(1:end-1,1:end-1))~=0);
+   if numel(fronteiray)==0
+       concluiu = 1;
+   end
    [obsy,obsx] = find(experimento.mapa_descoberto==0);
    k = 1;
    while k<(nRobos+1)
@@ -34,7 +37,7 @@ if(experimento.flag)
          D = D - 1;
     end
     for k = 1:nRobos
-        robo_(k).Pdes = Pdes(k,:);
+        robo_(k).Pdes = Pdes(k,:)';
         robo_(k).chegou = false;
     end
 end

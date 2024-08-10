@@ -30,8 +30,8 @@ tempo = 0:tamos:tempo_max;  % controle de tempo
 i = 0;  % contador
 
 colidiu = 0;
-
-while  (~colidiu && (i*tamos<tempo_max))
+concluiu =0;
+while  (~colidiu && (i*tamos<tempo_max) && ~concluiu)
       % distancia maior que 5 cm ou vlin maior q 5 cm/s ou vrot maior que 0.1 rad/s
     tic     
     % atualização das variáveis de controle de tempo

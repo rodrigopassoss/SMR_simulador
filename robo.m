@@ -104,7 +104,7 @@ classdef robo
         end
         
         function obj = controle_e_navegacao(obj)
-                   controlador            
+                   controlador2            
         end      
              
         function [Ksir_real, X] = dinamica_zuadento(obj,Tamos)
